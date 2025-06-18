@@ -21,6 +21,7 @@ Here we are going to learn a bit about penguins!
 See below for averages on penguins. 
 
 ```{r penguins-ex, echo=FALSE}
+install.packages("palmerpenguins")
 library(dplyr)
 library(palmerpenguins)
 
@@ -39,7 +40,9 @@ summarize(
 Summarize the dataset in a meaningful way (use AT LEAST two of the key functions from slide #12)
 
 ```{r}
-
+heavy <- penguins %>%
+  filter(species == "Gentoo", body_mass_g > 5000)
+head(heavy)
 ```
 
 # Final task
